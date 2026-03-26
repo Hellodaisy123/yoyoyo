@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专属命运手串</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-image">
+        <img src="头图.png" alt="专属命运宝石" style="width: 100%; height: 500px; object-fit: cover;">
+    </div>
+    <div class="container">
+        
+        <div class="form-section">
+            <div class="form-item">
+                <label class="form-label">出生时间</label>
+                <input type="datetime-local" class="form-input" id="birthDate">
+            </div>
+            
+            <div class="form-item">
+                <label class="form-label">性别</label>
+                <select class="form-select" id="gender">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </div>
+            
+            <div class="form-item">
+                <label class="form-label">出生地点</label>
+                <input type="text" class="form-input" id="birthPlace" placeholder="请输入出生地点">
+            </div>
+        </div>
+        
+        <button class="submit-btn" onclick="calculateBazi()">命运分析与改运宝石</button>
+        
+        <div class="result" id="result" style="display: none;">
+            <div class="result-content">
+                <div class="bazi-section">
+                    <h2 class="result-title">生辰分析</h2>
+                    <div class="result-item">年柱：<span id="yearPillar"></span></div>
+                    <div class="result-item">月柱：<span id="monthPillar"></span></div>
+                    <div class="result-item">日柱：<span id="dayPillar"></span></div>
+                    <div class="result-item">时柱：<span id="hourPillar"></span></div>
+                    <div class="result-item" style="margin-top: 20px;">五行属性：<span id="wuxing"></span></div>
+                    <div class="interpretation" style="margin-top: 30px;">
+                        <h3 style="margin-bottom: 15px; color: #333;">生辰解读</h3>
+                        <p id="interpretation" style="line-height: 1.6; color: #666;"></p>
+                    </div>
+                </div>
+                
+                <div class="gem-section">
+                    <h2 class="result-title">适合的宝石</h2>
+                    <div class="gem-list" id="gemList">
+                        <!-- 宝石推荐将在这里动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

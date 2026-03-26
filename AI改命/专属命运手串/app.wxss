@@ -1,0 +1,96 @@
+/* 全局样式 */
+page {
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 20rpx;
+}
+
+.form-item {
+  margin-bottom: 30rpx;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 20rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+
+.form-picker {
+  width: 100%;
+  padding: 20rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 24rpx;
+  background-color: #1976D2;
+  color: white;
+  font-size: 32rpx;
+  font-weight: bold;
+  border: none;
+  border-radius: 10rpx;
+  margin-top: 40rpx;
+}
+
+.result {
+  margin-top: 40rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.1);
+}
+
+.result-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.result-item {
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.gem-list {
+  margin-top: 20rpx;
+}
+
+.gem-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+  padding: 15rpx;
+  background-color: #f9f9f9;
+  border-radius: 8rpx;
+}
+
+.gem-name {
+  font-weight: bold;
+  margin-right: 20rpx;
+  color: #333;
+}
+
+.gem-effect {
+  flex: 1;
+  color: #666;
+  font-size: 28rpx;
+}

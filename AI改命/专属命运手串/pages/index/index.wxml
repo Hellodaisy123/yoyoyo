@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="form-item">
+    <text class="form-label">出生时间</text>
+    <picker class="form-picker" mode="datetime" value="{{birthDate}}" start="1900-01-01" end="2030-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        {{birthDate}}
+      </view>
+    </picker>
+  </view>
+  
+  <view class="form-item">
+    <text class="form-label">性别</text>
+    <picker class="form-picker" range="{{genderArray}}" value="{{genderIndex}}" bindchange="bindGenderChange">
+      <view class="picker">
+        {{genderArray[genderIndex]}}
+      </view>
+    </picker>
+  </view>
+  
+  <view class="form-item">
+    <text class="form-label">出生地点</text>
+    <input class="form-input" placeholder="请输入出生地点" value="{{birthPlace}}" bindinput="bindPlaceInput" />
+  </view>
+  
+  <button class="submit-btn" bindtap="calculateBazi">获取专属命运手串</button>
+  
+  <view class="result" wx:if="{{showResult}}">
+    <text class="result-title">生辰八字</text>
+    <view class="result-item">年柱：{{bazi.year}}</view>
+    <view class="result-item">月柱：{{bazi.month}}</view>
+    <view class="result-item">日柱：{{bazi.day}}</view>
+    <view class="result-item">时柱：{{bazi.hour}}</view>
+    
+    <text class="result-title" style="margin-top: 30rpx;">适合的宝石</text>
+    <view class="gem-list">
+      <view class="gem-item" wx:for="{{recommendedGems}}" wx:key="index">
+        <text class="gem-name">{{item.name}}</text>
+        <text class="gem-effect">{{item.effect}}</text>
+      </view>
+    </view>
+  </view>
+</view>
